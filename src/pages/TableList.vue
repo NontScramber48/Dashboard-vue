@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div class="row">
     <div class="col-12">
@@ -9,7 +10,7 @@
       </card>
     </div>
 
-    <div class="col-12">
+    <!-- <div class="col-12">
       <card class="card-plain">
         <div class="table-full-width table-responsive">
           <paper-table
@@ -22,70 +23,72 @@
           </paper-table>
         </div>
       </card>
-    </div>
+    </div> -->
   </div>
 </template>
-<script>
+<!-- eslint-disable prettier/prettier -->
+<script setup>
 import { PaperTable } from "@/components";
-const tableColumns = ["Id", "Name", "Salary", "Country", "City"];
-const tableData = [
-  {
-    id: 1,
-    name: "Dakota Rice",
-    salary: "$36.738",
-    country: "Niger",
-    city: "Oud-Turnhout",
-  },
-  {
-    id: 2,
-    name: "Minerva Hooper",
-    salary: "$23,789",
-    country: "Curaçao",
-    city: "Sinaai-Waas",
-  },
-  {
-    id: 3,
-    name: "Sage Rodriguez",
-    salary: "$56,142",
-    country: "Netherlands",
-    city: "Baileux",
-  },
-  {
-    id: 4,
-    name: "Philip Chaney",
-    salary: "$38,735",
-    country: "Korea, South",
-    city: "Overland Park",
-  },
-  {
-    id: 5,
-    name: "Doris Greene",
-    salary: "$63,542",
-    country: "Malawi",
-    city: "Feldkirchen in Kärnten",
-  },
-];
-
-export default {
-  components: {
-    PaperTable,
-  },
-  data() {
-    return {
-      table1: {
-        title: "Stripped Table",
-        subTitle: "Here is a subtitle for this table",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-      table2: {
-        title: "Table on Plain Background",
-        subTitle: "Here is a subtitle for this table",
-        columns: [...tableColumns],
-        data: [...tableData],
-      },
-    };
-  },
-};
+import { ref } from "vue";
+const table1 = ref({
+  title: "สรุปยอดประจำสัปดาห์",
+  subTitle: "",
+  columns: ["day", "income", "expenses", "profit", "loss"],
+  data: [
+    {
+      day: "Sun",
+      income: "$36.738",
+      expenses: "$36.738",
+      profit: "$36.738",
+      loss: "$36.738",
+    },
+    {
+      day: "Mon",
+      income: "$63,542",
+      expenses: "$23,789",
+      profit: "$36.738",
+      loss: "$36.738",
+    },
+    {
+      day: "Tue",
+      income: "$63,542",
+      expenses: "$56,142",
+      profit: "$56,142",
+      loss: "$36.738",
+    },
+    {
+      day: "Wed",
+      income: "$63,542",
+      expenses: "$38,735",
+      profit: "$36.738",
+      loss: "$36.738",
+    },
+    {
+      day: "Thu",
+      income: "$63,542",
+      expenses: "$63,542",
+      profit: "$36.738",
+      loss: "$63,542",
+    },
+    {
+      day: "Fri",
+      income: "$63,542",
+      expenses: "$63,542",
+      profit: "$36.738",
+      loss: "$36.738",
+    },
+    {
+      day: "Sat",
+      income: "$63,542",
+      expenses: "$63,542",
+      profit: "$36.738",
+      loss: "$36.738",
+    },
+  ],
+});
 </script>
+// table2: { // title: "Table on Plain Background", // subTitle: "Here is a
+subtitle for this table", // columns: [...tableColumns], // data:
+[...tableData],
+
 <style></style>

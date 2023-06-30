@@ -7,15 +7,14 @@
   >
     <a class="nav-link">
       <slot>
-        <i v-if="icon" :class="icon"></i>
-        <p>{{ name }}</p>
+        <p>ดูข้อมูล</p>
       </slot>
     </a>
   </component>
 </template>
 <script>
 export default {
-  name: "sidebar-link",
+  name: "datalink",
   inheritAttrs: false,
   inject: {
     autoClose: {
